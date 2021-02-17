@@ -2,24 +2,30 @@
 # Inline method.
 # TODO: Refactor this program to improve its readability.
 
-LEGAL_DRINKING_AGE = 18
+
 class Person:
     def __init__(self, my_age):
         self.age = my_age
         
-def enter_night_club(individual):
-    if older_than_18_year_old(individual.age):
+def enter_night_club(Person):
+    LEGAL_DRINKING_AGE = 18
+    guest_age = Person.age
+    if guest_age > LEGAL_DRINKING_AGE:
         print("Allowed to enter.")
     else:
         print("Enterance of minors is denited.")
 
-def older_than_18_year_old(age):
-    if age > LEGAL_DRINKING_AGE:
-        return True
-    else: 
-        return False
-    
-    
-person = Person(17.9)
-enter_night_club(person)
+
+
+
+ 
+James = Person(17.9)
+Mark = Person(24)
+Sue = Person(35)
+Kesha = Person(17)
+
+enter_night_club(James)
+enter_night_club(Kesha)
+enter_night_club(Sue)
+enter_night_club(Mark)
         
